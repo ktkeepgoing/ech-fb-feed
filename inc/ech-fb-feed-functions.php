@@ -41,18 +41,14 @@ $GLOBALS['fb_page_id'] = "100499611301662";
 function ech_fb_feed_fun($atts){
 
 	$paraArr = shortcode_atts( array(					
-		'fbpage_id' => '100499611301662',
 		'limit' => 12				
 	), $atts );
 
-	if ($paraArr['fbpage_id'] == null) {
-		return "<h4>Error - fbpage_id not specified</h4>";
-	}
-	
+
 	$limit = (int)$paraArr['limit'];
 
 
-	$fb_graph_link = "https://graph.facebook.com/v12.0/".$paraArr['fbpage_id']."?date_format=U&fields=posts.limit(".$limit.")%7Bcreated_time%2Cmessage%2Cis_published%2Cattachments%7Bmedia%2Cmedia_type%7D%2Cpermalink_url%7D%2Cname%2Cpicture&access_token=".$GLOBALS['perm_access_token'];
+	$fb_graph_link = "https://graph.facebook.com/v12.0/".$GLOBALS['fb_page_id']."?date_format=U&fields=posts.limit(".$limit.")%7Bcreated_time%2Cmessage%2Cis_published%2Cattachments%7Bmedia%2Cmedia_type%7D%2Cpermalink_url%7D%2Cname%2Cpicture&access_token=".$GLOBALS['perm_access_token'];
 
 	$get_fb_json = get_fb_json($fb_graph_link);
 	
