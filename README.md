@@ -1,6 +1,11 @@
 # ech-fb-feed
 A Wordpress plugin to display Facebook feed of a Facebook page.
 
+There is a "video" icon appears on the top right corner of the thumbnail in order to identify a video feed.  When the video thumbnail image is clicked, a lightbox will popup to display the video. 
+
+Visitor can also shares the feed by clicking the "Share" button.
+
+
 ## Before installation
 Before starting to use this plugin, you need to create a Facebook App of the Facebook page in order to get a "Permanent Page Access Token" that does not expire. Follow the instructions laid out in Facebook's [extending page tokens documentation](https://developers.facebook.com/docs/facebook-login/access-tokens#extendingpagetokens).
 
