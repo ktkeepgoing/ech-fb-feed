@@ -1,0 +1,182 @@
+.ech_fb_feed_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single_feed
+{
+    display: inline-block;
+    margin: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
+    border-radius: 15px;
+    width: 32%;
+}
+
+.fb_profile_container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.profile_pic {
+    width: 40px;
+    height: 40px; 
+    box-shadow: 0px 0px 0px 1px #dee2e6;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile_pic img { 
+    width: 100%; 
+    border-radius: 50% !important;
+}
+
+.profile_name {
+    color: #0274be;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post_date {
+    font-size: 12px;
+    display: block;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.post_content {
+    font-size: 15px;
+    line-height: 1.46em;
+    color: #2A2A5D;
+    text-align: left;
+}
+
+.post_thumb {
+    position: relative;
+}
+
+.video_thumb {
+    cursor: pointer;
+}
+
+.video_icon {
+    position: absolute;
+    color: #0274be;
+    opacity: 0.7;
+    top: 10px;
+    right: 10px;
+}
+
+
+.feed_btns {
+    text-align: right;
+    border-top: #dee2e6 solid 1px;
+    margin-top: 20px; 
+}
+.feed_btns a {
+    font-size: 12px !important;
+    text-decoration: none!important;
+    background: #dee2e6;
+    color: #343a40!important;
+    padding: 8px 15px;
+    border-radius: 3px;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+@media(max-width: 767px) {
+    .single_feed {
+        width: 100%;
+    }
+} /* w767 */
+
+/************ FB Load More Btn *************/
+.fb_feed_btn_container {
+    text-align: center;
+}
+
+#fb_load_more_btn {
+    background: #2a275c;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+#fb_load_more_btn:hover {
+    background: #737eac;
+}
+
+
+/************ (END)FB Load More Btn *************/
+
+
+
+
+/************ FB Overlay *************/
+
+.fb_feed_overlay {
+    position: fixed; 
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+    z-index: 10;
+}
+.fb_feed_overlay .fb_overlay_inner {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -45%);
+    width: 50%;
+}
+
+.fb_overlay_close {
+    text-align: right;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.fb_video_container {
+    position: relative;
+    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+    height: 0;
+    overflow: hidden;
+}
+
+.fb_video_container video {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 1023px){
+
+    .fb_feed_overlay .fb_overlay_inner {
+        width: 70%;
+    }
+} /* w1023 */
+
+
+@media(max-width: 767px){
+
+    .fb_feed_overlay .fb_overlay_inner {
+        width: 90%;
+    }
+} /* w767 */
+/************ (END)FB Overlay *************/
+
